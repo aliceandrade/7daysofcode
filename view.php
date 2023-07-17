@@ -1,12 +1,9 @@
-<?php
+ <?php
 
-$views = [
-    '/view/register.view',
-    '/view/login.view',
-    '/view/not_found.view'
-];
-
-foreach ($views as $view) {
-    $content = file_get_contents($view);
+ function render_view($template){
+    $content = file_get_contents(VIEW_FOLDER.$template);
     echo $content;
- }
+} ;
+
+
+
